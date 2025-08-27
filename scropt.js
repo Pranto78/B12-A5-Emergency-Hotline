@@ -21,10 +21,10 @@ for(const copyBtn of copyButton){
 
         const card = this.closest('.cards');
 
-        // Find the text you want to copy inside this card
+        
         const textToCopy = card.querySelector('.info').innerText;
 
-        // Use the Clipboard API to copy
+        
         navigator.clipboard.writeText(textToCopy).then(function() {
             alert('Copied to clipboard: ' + textToCopy);
         }).catch(function(err) {
@@ -79,5 +79,14 @@ for(const alertBtn of callAlert){
          historyContainer.appendChild(historyItem);
     })
 }
+
+
+// clear history
+
+const clearHistoryBtn = document.getElementById('clear-history');
+
+clearHistoryBtn.addEventListener('click' , function(){
+    historyContainer.innerHTML = "" ;
+});
 
 
