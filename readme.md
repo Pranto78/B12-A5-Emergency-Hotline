@@ -1,108 +1,4 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-005
 
-### 📅 Deadline For 60 marks: 29th August, 2025 (11:59 pm ⏱️)
-
-### 📅 No Deadline For 50 marks
-
-### 📅 Deadline For 30 marks: Any time after 29th August.
-
----
-
-## ✅ Main Requirements (50 Marks)
-
-### 1. Navbar
-
-- **Website name & logo** on the left as Figma
-- **Heart icon, coin count (default-100), and Copy Count** on the right as Figma
-
----
-
-### 2. Hero Section
-
-- **Background Gradient** in the Whole Section
-- **A Relevant Logo** at the top-center
-- **Section Title** in the center
-- **A Relevant Slogan** in the bottom Center
-
----
-
-### 2. Main Section
-
-This Section will have layout as figma
-
-<table border=1 width="100%" cellpadding="50">
-<tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
- </tr>
- <tr>
-    <td colspan=9 >Card Section</td>
-    <td colspan=3>History Section</td>
- </tr>
-</table>
-
-### Emergency Hotline Section
-
-- **Show Minimum 6 cards**. Each card will contain:
-  - Icon or Image
-  - Relevant Name
-  - Relevant Name in English
-  - Hotline number for calling
-  - Category Badge
-  - 💗 icon at left
-  - **2 buttons** at the bottom: Copy and Call with icons as Figma
-
-### History Section
-
-- **A white Background** in the whole section
-- **History Title with icon** at the top-left as Figma
-- **Clear History Button** at the top-right as Figma
-
----
-
-### 3. Responsiveness (5 Marks)
-
-- Website should be fully **responsive for mobile devices** (implementation up to you)
-
----
-
-## Functionalities
-
-### 4. Heart Icons
-
-- Clicking on the 💗 **heart icon** of any card will increase the count in the Navbar
-
----
-
-### 5. Call Buttons
-
-- On clicking a card's **Call Button**, following actions will happen:
-  - Show an **alert** with a message including the service name and number
-  - Each call will **cut 20 coins**. Reduce Coin after each click.
-  - If coins are less than 20, show a relevant alert and terminate the process.
-  - Add this service into the **Call History section** with:
-    - Service name
-    - Service number
-
----
-
-### 5. Call History Section
-
-- Show all called services with name & number. This will empty initially. when call button clicked it will filled dynamically.
-- A **Clear History button** on the right
-- Clicking this button will remove all data from call history
-
----
 
 ## Create Readme
 
@@ -116,50 +12,66 @@ You have to create a `Readme.md` file. and write down following questions. Dont 
 4. What is **Event Delegation** in JavaScript? Why is it useful?
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
 
+--
+--> Answer Part:
+
+1. getElementById: (i) It selects one element by id (unique).
+                   (ii) It returns single element or null.
+                   (iii) When selecting a specific element by ID
+
+   getElementsByClassName:
+                     (i) It selects all element with a give class
+                     (ii) It returns live htmlcollection (updates if DOM changes).
+                     (iii) When you need multiple elements by class.   
+
+    querySelector:
+                   (i) It selects first element that matches a css selector.
+                   (ii) It returns single elements.
+                   (iii) When you need the first match of a CSS selector.
+
+    querySelectorAll:
+                    (i) It selects all elements that match a css selector.
+                    (ii) It returns static nodelist.
+                    (iii) When you need multiple elements with CSS flexibility.       
 ---
 
-## 🧪 Challenges Part (10 Marks)
+2.   First of all create a element, a empty one (p,div,h1 , span). Then add content or attribute after that find the parent, Choose where you want this new element to appear in your page. Then finally attach the new element into the parent. This can be at the end, at the beginning, or before-after a specific element.
 
-- On clicking the **Copy button**, show an alert and **increase the copy count** (3 Marks)
-
-- Hotline number will be **copied on click** so it can be pasted anywhere (4 Marks)
-
-💡Hint: You can ask for Help from `ChatGPT` Mamma . Just copy the below prompt , generate answer. use it with your own way.
-
-```bash
-I have a card with some text and a button inside it. I want that when a user clicks the button, some specific text from the card is copied to the clipboard using JavaScript. Please provide the code and explain it step by step.
-```
-
-- After clicking on the **Call button**, the **exact time of the call** will be shown in the Call History section (3 Marks)
-
-💡Hint: Search Google with that below question
-
-```bash
-How to get current local time in js
-```
-
+   In short : Create ---> Customize --> Parent ---> Insert.
 ---
 
-## ⚙️ Technology Stack
+3.  Event bubbling is a way events move in the DOM when something happens, like a click.
 
-- HTML
-- CSS ( Vanilla , Tailwind CSS , DaisyUI , Others - wheatever you like )
-- JavaScript ( Vanilla only. No Framework / Library Allowed )
+   Functionality (How does it works extackly?)
+   
+  Imagine there is a button inside a div. First the button detects the click then the div that contains the    button detects it and finally the body detects it. It allows parents to listen to child events.
 
+  In short: button-->div-->body --> html--> document
 ---
 
-## 📌 Rules
+4. Event Delegation is a technique in JavaScript where instead of attaching event listeners to many child       elements, you attach a single event listener to their parent.
 
-- ✅ Minimum **5 meaningful commits** required
-- ❌ No Lorem Ipsum or dummy placeholder text. Use **relevant content only**
-
----
-
-## 🔗 What to Submit
-
-- 📂 **GitHub Repository**
-- 🌐 **Live Link**
+  --> Useful: Instead of adding 100 event listener , you only need 1. It works for dynamic element. It is          easiar to manage and maintain.
 
 ---
 
-# Let's Code and Achieve your Dream 🎯
+5. preventDefault():
+                   (i) Stops the browser’s default action for an event.
+                   (ii) When you want to allow the event but block the browser’s built-in behavior.
+                   (iii) Prevent a link from navigating to another page, or prevent a form from submitting.
+
+
+   stopPropagation():
+                    (i) Stops the event from bubbling up the DOM tree.
+                    (ii) When you want the event to happen only on the current element, not on its parent.
+                    (iii) A button inside a div clicking it shouldn’t trigger the div’s click listener.
+
+
+
+
+   
+
+   
+
+
+             
